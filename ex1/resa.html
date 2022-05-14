@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+
+
+    .form-grouprow {
+        width: 700px;
+        padding-top: -5px;
+    }
+
+    h3 {
+        color: rgb(1, 22, 19);
+        margin-left: 500px;
+    }
+
+    label {
+        color: rgb(25, 138, 158);
+        font-size: 1em;
+        text-transform: capitalize;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+    }
+
+    .container {
+        border-radius: 5px;
+        background-color: #EEEEEE;
+        padding: 10px;
+    }
+
+    p {
+        color: rgb(25, 138, 158);
+        font-size: 1em;
+        text-transform: capitalize;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    #button {
+        display: inline-block;
+        background-color: rgb(4, 49, 47);
+        border-radius: 10px;
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        padding: 5px;
+        width: 400px;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin-left: 700px;
+    }
+
+    #button:hover {
+        background-color: rgb(25, 138, 158);
+    }
+
+    h6 {
+        display: inline-block;
+        margin-left: 200px;
+    }
+</style>
+
+<body>
+<h3 class="form-group"> Formulaire Commande de Sandwichs </h3>
+<form action="recap.php" method="post" enctype="multipart/form-data">
+    <div class="container">
+        <div class=" form-group row ">
+            <label for="nom" class="col-sm-2 col-form-label">Nom :</label>
+            <div class="col-sm-10">
+                <input type="text " name="nom" class="form-control " placeholder="Entrer votre nom " size="15 " maxlength="30 " required>
+            </div>
+            <label for="prenom" class="col-sm-2 col-form-label">Prénom:</label>
+            <div class="col-sm-10">
+                <input type="text " name="prenom" class="form-control " placeholder="Entrer votre prénom " required>
+            </div>
+        </div>
+        <div class="form-group row ">
+            <label class="col-sm-2 col-form-label" for="nombre">Nombre de sandwichs</label>
+            <div class="col-sm-10">
+                <input type="number" name="nbsand" class="form-control " placeholder="nombre de sandwichs " id="nombre " value="0 " required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label" for="text ">Adresse :</label>
+            <div class="col-sm-10">
+                <textarea class="form-control " name="Adresse" id="text " rows="3 " required></textarea>
+            </div>
+        </div>
+        <div class="form-group row ">
+            <label class="col-sm-2 col-form-label" for="sand-select">Type Sandwich:</label>
+            <div class="col-sm-10">
+                <select name="sandwichs" id="sand-select">
+                    <option value=" " aria-required="true ">--choisissez le type du sandwich--</option>
+                    <option value="Poulet ">Poulet</option>
+                    <option value="Escalope ">Escalope</option>
+                    <option value="Viande ">Viande</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group row ">
+            <p>Les ingrédients a ajouter :</p>
+            <div class="col-sm-10">
+                <input type="checkbox" name="ing[]" value="harissa">Harissa<br>
+                <input type="checkbox" name="ing[]" value="Mayonnaise">Mayonnaise<br>
+                <input type="checkbox" name="ing[]" value="Salade">Salade<br>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-10">
+                CIN : <input type="file" name="cin">
+            </div>
+        </div>
+        <input id="button" type="submit" name="commander" value="Commander">
+
+</form>
+</div>
+<h6> Si vous dépasser 10 sandwitchs, une remise de 10% est appliquée.</h6>
+</body>
+
+</html>
